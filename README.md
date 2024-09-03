@@ -3,16 +3,15 @@
 Erudite is an intelligent chatbot that allows you to have conversations with multiple PDF documents.
 
 <p align="center">
-  <img src="SS11.png" width="1000">
-  <img src="ss/SS12.png" width="1000">
-  <img src="ss/SS13.png" width="1000">
-  <img src="ss/SS14.png" width="1000">
-  <img src="ss/SS2.png" width="1000">
-  <img src="ss/SS1.png" width="1000">
-  <img src="ss/SS3.png" width="1000">
-  <img src="ss/SS4.png" width="1000">
-  <img src="ss/SS5.png" width="1000">
+  <img src="Screenshot (11).png" width="1000">
 </p>
+
+
+(Removed this suggested questions code due to some bugs)
+<p align="center">
+  <img src="Screenshot (12).png" width="1000">
+</p>
+
 
 ## 🛠️ How It Works
 
