@@ -15,16 +15,19 @@ from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 
+# Extracts text from a list of PDF files
 def get_pdf_text(pdf_docs):
     text_data = []
     for pdf in pdf_docs:
         pdf_reader = PdfReader(pdf)
         text = ""
+        # Extract text from each page of the PDF
         for page in pdf_reader.pages:
             text += page.extract_text()
         text_data.append({"text": text, "source": pdf.name})
     return text_data
 
+# This splits the extracted text into smaller chunks for processing
 def get_text_chunks(text_data):
     text_splitter = CharacterTextSplitter(
         separator="\n",
@@ -37,12 +40,14 @@ def get_text_chunks(text_data):
         chunks += [{"chunk": chunk, "source": item["source"]} for chunk in text_splitter.split_text(item["text"])]
     return chunks
 
+# Converts text chunks into vector representations for similarity search
 def get_vectorstore(text_chunks):
     embeddings = OpenAIEmbeddings()
     texts = [item["chunk"] for item in text_chunks]
     vectorstore = FAISS.from_texts(texts=texts, embedding=embeddings, metadatas=[{"source": item["source"]} for item in text_chunks])
     return vectorstore
 
+# Sets up the conversational AI chain with the vector store and prompt template
 def get_conversation_chain(vectorstore):
     prompt_template = PromptTemplate(
         input_variables=["context", "question"],
@@ -59,7 +64,7 @@ def get_conversation_chain(vectorstore):
     )
 
     llm = ChatOpenAI(
-        temperature=0,
+        temperature=0, # Ensuring the responses are deterministic (required)
         max_tokens=500,
     )
 
@@ -68,7 +73,8 @@ def get_conversation_chain(vectorstore):
         return_messages=True,
         output_key='answer'  
     )
-    
+
+    # Create a conversational retrieval chain that uses the LLM, vector store, and memory
     conversation_chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=vectorstore.as_retriever(),
@@ -80,6 +86,7 @@ def get_conversation_chain(vectorstore):
     
     return conversation_chain
 
+# Handles user input and displays the conversation history
 def handle_userinput(user_question):
     response = st.session_state.conversation({'question': user_question})
     st.session_state.chat_history = response['chat_history']
