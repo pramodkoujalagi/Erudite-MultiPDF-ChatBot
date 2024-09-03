@@ -52,3 +52,4 @@ Erudite is an intelligent chatbot that allows you to have conversations with mul
 - OpenAI: For generating embeddings and powering the language model
 - FAISS: For efficient similarity search and clustering of dense vectors
 - PyPDF2: For extracting text from PDF documents
+- Can use use source tools for generating embeddings from HuggingFace and GroqChat, Llama, Palm etc. 
