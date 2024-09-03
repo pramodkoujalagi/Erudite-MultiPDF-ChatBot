@@ -11,6 +11,9 @@ from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub
 # from embeddings import TfidfEmbeddings
+# from sentence_transformers import SentenceTransformer
+# from langchain.embeddings import HuggingFaceEmbeddings
+# from sklearn.feature_extraction.text import TfidfVectorizer
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
@@ -43,6 +46,9 @@ def get_text_chunks(text_data):
 # Converts text chunks into vector representations for similarity search
 def get_vectorstore(text_chunks):
     embeddings = OpenAIEmbeddings()
+    #embeddings = HuggingFaceInstructEmbeddings(model_name="dunzhang/stella_en_400M_v5")
+    # vectorizer = TfidfVectorizer()
+    # embeddings = vectorizer.fit_transform(text_chunks).toarray()
     texts = [item["chunk"] for item in text_chunks]
     vectorstore = FAISS.from_texts(texts=texts, embedding=embeddings, metadatas=[{"source": item["source"]} for item in text_chunks])
     return vectorstore
@@ -63,6 +69,8 @@ def get_conversation_chain(vectorstore):
         """
     )
 
+    #llm = ChatGroq(temperature=0.5, max_tokens=500)
+    # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
     llm = ChatOpenAI(
         temperature=0, # Ensuring the responses are deterministic (required)
         max_tokens=500,
@@ -128,9 +136,13 @@ def main():
             "Upload your PDFs here and click on 'Process'", accept_multiple_files=True)
         if st.button("Process"):
             with st.spinner("Processing"):
+                # get pdf text
                 text_data = get_pdf_text(pdf_docs)
+                # get the text chunks
                 text_chunks = get_text_chunks(text_data)
+                # create vector store
                 vectorstore = get_vectorstore(text_chunks)
+                # create conversation chain
                 st.session_state.conversation = get_conversation_chain(vectorstore)
 
 if __name__ == '__main__':
