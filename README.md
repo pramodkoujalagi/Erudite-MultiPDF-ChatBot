@@ -9,7 +9,7 @@ Erudite is an intelligent chatbot that allows you to have conversations with mul
 </p>
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="image2.png" width="1000">
 </p>
 
 
