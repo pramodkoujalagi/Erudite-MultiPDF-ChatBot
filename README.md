@@ -8,10 +8,8 @@ Erudite is an intelligent chatbot that allows you to have conversations with mul
   <img src="image.png" width="1000">
 </p>
 
-
-### (Removed this suggested questions code due to some bugs)
 <p align="center">
-  <img src="Screenshot (12).png" width="1000">
+  <img src="" width="1000">
 </p>
 
 
