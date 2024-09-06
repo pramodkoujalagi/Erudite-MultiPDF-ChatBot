@@ -8,7 +8,7 @@ Erudite says - Transform Your PDF Conversations!
 
 ## Introduction
 
-Erudite is not just another chatbot, it's your intelligent assistant for navigating through multiple PDF documents. With Erudite, dive deep into your PDFs, extract relevant information, and have meaningful conversations about your documents like never before. Powered by latest AI technologies, Erudite makes document interaction seamless and insightful.
+Erudite is not just another chatbot, it's your intelligent assistant for navigating through multiple PDF documents. With Erudite, dive deep into your PDFs, extract relevant information, and have meaningful conversations about your documents. Powered by latest AI technologies, Erudite makes document interaction seamless and insightful.
 
 ## 🤖 Meet Erudite - Your MultiPDF Assistant
 
