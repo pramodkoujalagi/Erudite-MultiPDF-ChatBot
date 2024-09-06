@@ -48,9 +48,11 @@ Erudite, your AI-powered PDF assistant, is designed to help you interact with mu
 - **Streamlit**: For creating an interactive user interface
 - **LangChain**: For building the conversational AI pipeline
 - **OpenAI**: For generating embeddings and powering the language model
+- **ChatGroq**: For alternative language model
 - **FAISS**: For fast similarity search and clustering of vectors
+- **Hugging Face**: For open source embeddings and additional AI tools
 - **PyPDF2**: For extracting text from PDFs
-- **Alternative Tools**: Open source embeddings from HuggingFace, ChatGroq, Llama, Palm, etc.
+- **Alternative Tools**: Open source embeddings from HuggingFace, ChatGroq, Llama, Palm, NLTK etc.
 
 
 
