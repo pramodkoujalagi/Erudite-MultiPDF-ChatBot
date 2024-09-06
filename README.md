@@ -4,6 +4,8 @@
 Erudite says - Transform Your PDF Conversations!
 </p>
 
+</p> <p align="center"> <img src="https://img.shields.io/badge/OpenAI-%23FFFFFF.svg?style=for-the-badge&logo=OpenAI&logoColor=black" alt="OpenAI"> <img src="https://img.shields.io/badge/ChatGroq-%23000000.svg?style=for-the-badge&logo=ChatGroq&logoColor=white" alt="ChatGroq"> <img src="https://img.shields.io/badge/Hugging%20Face-%23FF6F00.svg?style=for-the-badge&logo=HuggingFace&logoColor=white" alt="Hugging Face"> <img src="https://img.shields.io/badge/FAISS-%233776AB.svg?style=for-the-badge&logo=FAISS&logoColor=white" alt="FAISS"> <img src="https://img.shields.io/badge/Streamlit-%23FF0000.svg?style=for-the-badge&logo=Streamlit&logoColor=red&color=white" alt="Streamlit"> <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=Python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=Docker&logoColor=blue&color=white" alt="Docker"> <img src="https://img.shields.io/badge/Langchain-%23FF0000.svg?style=for-the-badge&logo=Langchain&logoColor=white" alt="Langchain"> </p>
+
 ## Introduction
 
 Erudite is not just another chatbot, it's your intelligent assistant for navigating through multiple PDF documents. With Erudite, dive deep into your PDFs, extract relevant information, and have meaningful conversations about your documents like never before. Powered by advanced AI technologies, Erudite makes document interaction seamless and insightful.
