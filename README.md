@@ -72,7 +72,3 @@ Elevate your PDF interactions with Erudite and experience a new level of documen
 ## ⚖️ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust any sections to better fit your needs or project specifics!
